@@ -54,7 +54,3 @@ rm -rf $RPM_BUILD_ROOT
 
 /usr/share/games/figlet
 %{_mandir}/man6/figlet.6.gz
-
-%changelog
-* Thu Jun 10 1999 Micha³ Margula <alchemyx@pld.org.pl>
-- initial rpm release
