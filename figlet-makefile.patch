@@ -1,0 +1,24 @@
+diff -ru figlet-2.2.orig/Makefile figlet-2.2.AX/Makefile
+--- figlet-2.2.orig/Makefile	Wed Feb 19 00:02:28 1997
++++ figlet-2.2.AX/Makefile	Wed Jun  9 21:52:42 1999
+@@ -10,18 +10,17 @@
+ # for changing this is if sh is not in the same place.
+ SHELL = /bin/sh
+ CC = gcc
+-CFLAGS = -g
+ 
+ # Where the executables should be put
+ DESTDIR = /usr/games
+ 
+ # Where the man page should be put
+-MANDIR = /usr/man/man6
++MANDIR = /usr/share/man/man6
+ 
+ # Where figlet will search first for fonts (the ".flf" files).
+ DEFAULTFONTDIR = $(DESTDIR)/lib/figlet.dir
+ # Use this definition if you can't put things in /usr/games
+-DEFAULTFONTDIR = fonts
++DEFAULTFONTDIR = /usr/share/games/figlet
+ 
+ # The filename of the font to be used if no other is specified
+ #   (standard.flf is recommended, but any other can be used).
