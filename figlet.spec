@@ -7,8 +7,6 @@ Version:	%{major}.%{minor}
 Release:	2
 License:	free
 Group:		Applications/Games
-Group(de):	Applikationen/Spiele
-Group(pl):	Aplikacje/Gry
 Source0:	ftp://wuarchive.wustl.edu/graphics/graphics/misc/figlet/program/unix/%{name}%{major}%{minor}.tar.gz
 Patch0:		%{name}-makefile.patch
 URL:		http://st-www.cs.uiuc.edu/~chai/figlet.html
