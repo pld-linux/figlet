@@ -13,7 +13,7 @@ Distribution:	PLD
 Source:		ftp://wuarchive.wustl.edu/graphics/graphics/misc/figlet/program/unix/%{name}%{major}%{minor}.tar.gz	
 Patch:		figlet-makefile.patch
 URL:		http://st-www.cs.uiuc.edu/~chai/figlet.html
-BuildRoot:	/tmp/%{name}-%{version}-buildroot
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Program for generating ASCII-art-like banners by using plenty of fonts. It
