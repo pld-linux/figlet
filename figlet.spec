@@ -9,6 +9,7 @@ Release:	2
 License:	Free
 Group:		Applications/Games
 Source0:	ftp://ftp.plig.org/pub/figlet/program/unix/%{name}%{major}%{minor}%{ver}.tar.gz
+# Source0-md5:	216bc6d86952003cc3db75d5c36eb4f6
 Patch0:		%{name}-makefile.patch
 URL:		http://www.figlet.org
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
