@@ -1,15 +1,14 @@
 %define		major	2
 %define		minor	2
-Summary:	Awesome ASCII-art banners generator.
-Summary(pl):	Program do generowania odjazowych napisów ASCII.
+Summary:	Awesome ASCII-art banners generator
+Summary(pl):	Program do generowania odjazowych napisów ASCII
 Name:		figlet
 Version:	%{major}.%{minor}
 Release:	1
 Group:		Applications/Games
 Group(de):	Applikationen/Spiele
 Group(pl):	Aplikacje/Gry
-Copyright:	free
-Vendor:		PLD
+License:	free
 Source0:	ftp://wuarchive.wustl.edu/graphics/graphics/misc/figlet/program/unix/%{name}%{major}%{minor}.tar.gz
 Patch0:		%{name}-makefile.patch
 URL:		http://st-www.cs.uiuc.edu/~chai/figlet.html
@@ -35,21 +34,21 @@ CFLAGS="%{rpmcflags}" \
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}/{games,share/games/figlet}
-install -d $RPM_BUILD_ROOT/%{_mandir}/man6
+install -d $RPM_BUILD_ROOT%{_mandir}/man6
 
 install figlet $RPM_BUILD_ROOT%{_prefix}/games
 install chkfont $RPM_BUILD_ROOT%{_prefix}/games
 cp -f fonts/* $RPM_BUILD_ROOT%{_datadir}/games/figlet
 
 gzip -9nf {FTP-NOTE,README,figfont.txt,figlist,figmagic,showfigfonts}
-install figlet.6 $RPM_BUILD_ROOT/%{_mandir}/man6
+install figlet.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755, root, root) %{_prefix}/games/*
+%attr(755,root,root) %{_prefix}/games/*
 %doc {FTP-NOTE,README,figfont.txt,figlist,figmagic,showfigfonts}.gz
 
 %{_datadir}/games/figlet
