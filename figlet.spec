@@ -29,7 +29,7 @@ podpisów do listów e-mail, itp.
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" \
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
