@@ -10,7 +10,7 @@ License:	Free
 Group:		Applications/Games
 Source0:	ftp://ftp.plig.org/pub/figlet/program/unix/%{name}%{major}%{minor}%{ver}.tar.gz
 Patch0:		%{name}-makefile.patch
-URL:		http://st-www.cs.uiuc.edu/~chai/figlet.html
+URL:		http://www.figlet.org
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
