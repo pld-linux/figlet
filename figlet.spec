@@ -5,12 +5,13 @@ Summary(pl):	Program do generowania odjazowych napisów ASCII.
 Name:		figlet
 Version:	%{major}.%{minor}
 Release:	1
-Group:		Games
-Group(pl):	Gry
+Group:		Applications/Games
+Group(de):	Applikationen/Spiele
+Group(pl):	Aplikacje/Gry
 Copyright:	free
 Vendor:		PLD
 Source0:	ftp://wuarchive.wustl.edu/graphics/graphics/misc/figlet/program/unix/%{name}%{major}%{minor}.tar.gz
-Patch0:		figlet-makefile.patch
+Patch0:		%{name}-makefile.patch
 URL:		http://st-www.cs.uiuc.edu/~chai/figlet.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,7 +29,7 @@ podpisów do listów e-mail, itp.
 %patch -p1
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" \
+CFLAGS="%{rpmcflags}" \
 %{__make}
 
 %install
@@ -36,12 +37,12 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_prefix}/{games,share/games/figlet}
 install -d $RPM_BUILD_ROOT/%{_mandir}/man6
 
-install -s figlet $RPM_BUILD_ROOT%{_prefix}/games
-install -s chkfont $RPM_BUILD_ROOT%{_prefix}/games
-cp fonts/* $RPM_BUILD_ROOT%{_datadir}/games/figlet
+install figlet $RPM_BUILD_ROOT%{_prefix}/games
+install chkfont $RPM_BUILD_ROOT%{_prefix}/games
+cp -f fonts/* $RPM_BUILD_ROOT%{_datadir}/games/figlet
 
-gzip -9nf {FTP-NOTE,README,figfont.txt,figlist,figmagic,showfigfonts,figlet.6}
-install figlet.6.gz $RPM_BUILD_ROOT/%{_mandir}/man6
+gzip -9nf {FTP-NOTE,README,figfont.txt,figlist,figmagic,showfigfonts}
+install figlet.6 $RPM_BUILD_ROOT/%{_mandir}/man6
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc {FTP-NOTE,README,figfont.txt,figlist,figmagic,showfigfonts}.gz
 
 %{_datadir}/games/figlet
-%{_mandir}/man6/figlet.6.gz
+%{_mandir}/man6/figlet.6*
