@@ -5,7 +5,7 @@ Summary(pl):	Program do generowania odjazdowych napisów ASCII
 Name:		figlet
 Version:	%{major}.%{minor}
 Release:	2
-License:	free
+License:	Free
 Group:		Applications/Games
 Source0:	ftp://wuarchive.wustl.edu/graphics/graphics/misc/figlet/program/unix/%{name}%{major}%{minor}.tar.gz
 Patch0:		%{name}-makefile.patch
