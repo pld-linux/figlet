@@ -45,6 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-%doc {FTP-NOTE,README,figfont.txt,figlist,figmagic,showfigfonts} 
+%doc FTP-NOTE README  figfont.txt figlist figmagic showfigfonts
 %{_datadir}/games/figlet
 %{_mandir}/man6/figlet.6*
