@@ -1,13 +1,14 @@
 %define		major	2
 %define		minor	2
+%define		ver	1
 Summary:	Awesome ASCII-art banners generator
 Summary(pl):	Program do generowania odjazdowych napisów ASCII
 Name:		figlet
-Version:	%{major}.%{minor}
-Release:	3
+Version:	%{major}.%{minor}.%{ver}
+Release:	1
 License:	Free
 Group:		Applications/Games
-Source0:	ftp://ftp.plig.org/pub/figlet/program/unix/%{name}%{major}%{minor}.tar.gz
+Source0:	ftp://ftp.plig.org/pub/figlet/program/unix/%{name}%{major}%{minor}%{ver}.tar.gz
 Patch0:		%{name}-makefile.patch
 URL:		http://st-www.cs.uiuc.edu/~chai/figlet.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -22,7 +23,7 @@ du¿ego wyboru czcionek. Mo¿e byæ wykorzystany do tworzenia logo,
 podpisów do listów e-mail, itp.
 
 %prep
-%setup -q -n %{name}%{major}%{minor}
+%setup -q -n %{name}%{major}%{minor}%{ver}
 %patch -p1
 
 %build
@@ -46,6 +47,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-%doc FTP-NOTE README  figfont.txt figlist figmagic showfigfonts
+%doc README  figfont.txt figlist figmagic showfigfonts
 %{_datadir}/games/figlet
 %{_mandir}/man6/figlet.6*
