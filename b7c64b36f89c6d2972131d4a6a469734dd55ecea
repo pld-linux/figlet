@@ -1,0 +1,2 @@
+- move figlet executables to %{_bindir},
+- cosmetics and simplifications.
