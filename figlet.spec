@@ -29,7 +29,7 @@ podpisów do listów e-mail, itp.
 
 %build
 %{__make} \
-	CC=%{__cc} \
+	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags}" \
 	DEFAULTFONTDIR=%{_datadir}/games/figlet
 
