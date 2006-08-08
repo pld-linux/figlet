@@ -25,7 +25,7 @@ podpisów do listów e-mail, itp.
 
 %prep
 %setup -q -n %{name}%{major}%{minor}%{ver}
-%patch -p1
+%patch0 -p1
 
 %build
 %{__make} \
