@@ -2,7 +2,7 @@
 %define		minor	2
 %define		ver	1
 Summary:	Awesome ASCII-art banners generator
-Summary(pl.UTF-8):   Program do generowania odjazdowych napisów ASCII
+Summary(pl.UTF-8):	Program do generowania odjazdowych napisów ASCII
 Name:		figlet
 Version:	%{major}.%{minor}.%{ver}
 Release:	3
