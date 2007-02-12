@@ -2,7 +2,7 @@
 %define		minor	2
 %define		ver	1
 Summary:	Awesome ASCII-art banners generator
-Summary(pl):	Program do generowania odjazdowych napisÛw ASCII
+Summary(pl.UTF-8):   Program do generowania odjazdowych napis√≥w ASCII
 Name:		figlet
 Version:	%{major}.%{minor}.%{ver}
 Release:	3
@@ -18,10 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Program for generating ASCII-art-like banners by using plenty of
 fonts. It can be used for generating logos, e-mail signatures, etc.
 
-%description -l pl
-Program do generacji napisÛw ze znakÛw semigraficznych przy uøyciu
-duøego wyboru czcionek. Moøe byÊ wykorzystany do tworzenia logo,
-podpisÛw do listÛw e-mail, itp.
+%description -l pl.UTF-8
+Program do generacji napis√≥w ze znak√≥w semigraficznych przy u≈ºyciu
+du≈ºego wyboru czcionek. Mo≈ºe byƒá wykorzystany do tworzenia logo,
+podpis√≥w do list√≥w e-mail, itp.
 
 %prep
 %setup -q -n %{name}%{major}%{minor}%{ver}
