@@ -2,7 +2,7 @@ Summary:	Awesome ASCII-art banners generator
 Summary(pl.UTF-8):	Program do generowania odjazdowych napisów ASCII
 Name:		figlet
 Version:	2.2.4
-Release:	1
+Release:	2
 License:	Free
 Group:		Applications/Games
 Source0:	ftp://ftp.plig.org/pub/figlet/program/unix/%{name}-%{version}.tar.gz
