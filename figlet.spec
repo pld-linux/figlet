@@ -30,7 +30,6 @@ podpisów do listów e-mail, itp.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/games/figlet} \
 	$RPM_BUILD_ROOT%{_mandir}/man6
 
@@ -44,7 +43,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
-%doc README  figfont.txt figlist showfigfonts
+%doc README figfont.txt figlist showfigfonts
+%attr(755,root,root) %{_bindir}/chkfont
+%attr(755,root,root) %{_bindir}/figlet
 %{_datadir}/games/figlet
 %{_mandir}/man6/figlet.6*
